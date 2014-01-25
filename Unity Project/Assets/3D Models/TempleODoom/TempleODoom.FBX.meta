@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 7df47a8f658020d4ca8eb76328534190
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bowel2
+    100002: Bowl
+    100004: Box001
+    100006: Box002
+    100008: Box003
+    100010: Box004
+    100012: Cylinder001
+    100014: DoorLeft
+    100016: FrontWall
+    100018: LeftWall
+    100020: RightWall
+    100022: Roof
+    100024: Roof001
+    100026: //RootNode
+    100028: Torch
+    100030: Torch001
+    400000: Bowel2
+    400002: Bowl
+    400004: Box001
+    400006: Box002
+    400008: Box003
+    400010: Box004
+    400012: Cylinder001
+    400014: DoorLeft
+    400016: FrontWall
+    400018: LeftWall
+    400020: RightWall
+    400022: Roof
+    400024: Roof001
+    400026: //RootNode
+    400028: Torch
+    400030: Torch001
+    2300000: Bowel2
+    2300002: Bowl
+    2300004: Box001
+    2300006: Box002
+    2300008: Box003
+    2300010: Box004
+    2300012: Cylinder001
+    2300014: DoorLeft
+    2300016: FrontWall
+    2300018: LeftWall
+    2300020: RightWall
+    2300022: Roof
+    2300024: Roof001
+    2300026: Torch
+    2300028: Torch001
+    3300000: Bowel2
+    3300002: Bowl
+    3300004: Box001
+    3300006: Box002
+    3300008: Box003
+    3300010: Box004
+    3300012: Cylinder001
+    3300014: DoorLeft
+    3300016: FrontWall
+    3300018: LeftWall
+    3300020: RightWall
+    3300022: Roof
+    3300024: Roof001
+    3300026: Torch
+    3300028: Torch001
+    4300000: LeftWall
+    4300002: RightWall
+    4300004: FrontWall
+    4300006: Box001
+    4300008: Roof
+    4300010: Box002
+    4300012: Box003
+    4300014: Cylinder001
+    4300016: Torch
+    4300018: Torch001
+    4300020: Roof001
+    4300022: Bowl
+    4300024: Bowel2
+    4300026: Box004
+    4300028: DoorLeft
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
