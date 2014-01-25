@@ -3,10 +3,12 @@
 var walkspeed: float = 5.0;
 var rotspeed: float = 20.0;
 var stop: boolean = false;
+var startpos: Vector3;
+var score: int = 0;
 
 function Start() {
 
-
+	startpos = transform.position;
 
 }
 
@@ -34,18 +36,22 @@ function Update() {
 
 function OnCollisionEnter(collision : Collision){
 	
-	print("Collision");
-	stop = true;
+	print("Collision");	
 	if (collision.gameObject.tag.Equals("Objective")) {
 		//set to win
+		
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		print("Win");
+		stop = true;
 		}
-	if (collision.gameObject.tag.Equals("Failure")) {
+	else if (collision.gameObject.tag.Equals("Failure")) {
 		//set to lose
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		print("Lose");
+		stop = true;
 		}
-	
+	else {
+		transform.position = startpos;
+		}
 	}
 	
