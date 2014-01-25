@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 36513200d29e3e44e9e0bc63c5b282be
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: rocket B0
+    100004: rocket B1
+    100006: rocket B10
+    100008: rocket B11
+    100010: rocket B12
+    100012: rocket B13
+    100014: rocket B14
+    100016: rocket B15
+    100018: rocket B16
+    100020: rocket B17
+    100022: rocket B18
+    100024: rocket B2
+    100026: rocket B3
+    100028: rocket B4
+    100030: rocket B5
+    100032: rocket B6
+    100034: rocket B7
+    100036: rocket B8
+    100038: rocket B9
+    400000: //RootNode
+    400002: rocket B0
+    400004: rocket B1
+    400006: rocket B10
+    400008: rocket B11
+    400010: rocket B12
+    400012: rocket B13
+    400014: rocket B14
+    400016: rocket B15
+    400018: rocket B16
+    400020: rocket B17
+    400022: rocket B18
+    400024: rocket B2
+    400026: rocket B3
+    400028: rocket B4
+    400030: rocket B5
+    400032: rocket B6
+    400034: rocket B7
+    400036: rocket B8
+    400038: rocket B9
+    2300000: rocket B0
+    2300002: rocket B1
+    2300004: rocket B10
+    2300006: rocket B11
+    2300008: rocket B12
+    2300010: rocket B13
+    2300012: rocket B14
+    2300014: rocket B15
+    2300016: rocket B16
+    2300018: rocket B17
+    2300020: rocket B18
+    2300022: rocket B2
+    2300024: rocket B3
+    2300026: rocket B4
+    2300028: rocket B5
+    2300030: rocket B6
+    2300032: rocket B7
+    2300034: rocket B8
+    2300036: rocket B9
+    3300000: rocket B0
+    3300002: rocket B1
+    3300004: rocket B10
+    3300006: rocket B11
+    3300008: rocket B12
+    3300010: rocket B13
+    3300012: rocket B14
+    3300014: rocket B15
+    3300016: rocket B16
+    3300018: rocket B17
+    3300020: rocket B18
+    3300022: rocket B2
+    3300024: rocket B3
+    3300026: rocket B4
+    3300028: rocket B5
+    3300030: rocket B6
+    3300032: rocket B7
+    3300034: rocket B8
+    3300036: rocket B9
+    4300000: rocket B0
+    4300002: rocket B1
+    4300004: rocket B2
+    4300006: rocket B3
+    4300008: rocket B4
+    4300010: rocket B5
+    4300012: rocket B6
+    4300014: rocket B7
+    4300016: rocket B8
+    4300018: rocket B9
+    4300020: rocket B10
+    4300022: rocket B11
+    4300024: rocket B12
+    4300026: rocket B13
+    4300028: rocket B14
+    4300030: rocket B15
+    4300032: rocket B16
+    4300034: rocket B17
+    4300036: rocket B18
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
