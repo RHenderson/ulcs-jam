@@ -55,5 +55,6 @@ function OnCollisionEnter(collision : Collision){
 	else {
 		transform.position = startpos;
 		}
+	rigidbody.angularVelocity = Vector3.zero;
 	}
 	

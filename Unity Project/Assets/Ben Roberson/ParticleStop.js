@@ -13,5 +13,6 @@ function Update () {
 function OnCollisionEnter(collision : Collision){
 
 	particleTRex.Stop();
+	particleTRex.audio.Stop();
 
 }
