@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: bf9251b47164d3e489ed7e2198f532af
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Box01
+    100002: ChamferCy0
+    100004: ChamferCy1
+    100006: ChamferCy2
+    100008: ChamferCy3
+    100010: ChamferCy4
+    100012: ChamferCyl
+    100014: Cylinder01
+    100016: Cylinder02
+    100018: Cylinder03
+    100020: //RootNode
+    400000: Box01
+    400002: ChamferCy0
+    400004: ChamferCy1
+    400006: ChamferCy2
+    400008: ChamferCy3
+    400010: ChamferCy4
+    400012: ChamferCyl
+    400014: Cylinder01
+    400016: Cylinder02
+    400018: Cylinder03
+    400020: //RootNode
+    2300000: Box01
+    2300002: ChamferCy0
+    2300004: ChamferCy1
+    2300006: ChamferCy2
+    2300008: ChamferCy3
+    2300010: ChamferCy4
+    2300012: ChamferCyl
+    2300014: Cylinder01
+    2300016: Cylinder02
+    2300018: Cylinder03
+    3300000: Box01
+    3300002: ChamferCy0
+    3300004: ChamferCy1
+    3300006: ChamferCy2
+    3300008: ChamferCy3
+    3300010: ChamferCy4
+    3300012: ChamferCyl
+    3300014: Cylinder01
+    3300016: Cylinder02
+    3300018: Cylinder03
+    4300000: Box01
+    4300002: Cylinder01
+    4300004: Cylinder02
+    4300006: Cylinder03
+    4300008: ChamferCyl
+    4300010: ChamferCy0
+    4300012: ChamferCy1
+    4300014: ChamferCy2
+    4300016: ChamferCy3
+    4300018: ChamferCy4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

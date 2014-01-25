@@ -14,7 +14,6 @@ public class SmashBrosHandler : MonoBehaviour {
 	void Update () {
 	currentTime += Time.deltaTime;
 		if (currentTime > maxTime){
-			print("End game");
 		}
 		
 	}
