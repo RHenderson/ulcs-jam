@@ -2,6 +2,7 @@
 
 var walkspeed: float = 5.0;
 var rotspeed: float = 20.0;
+var stop: boolean = false;
 
 function Start() {
 
@@ -11,6 +12,9 @@ function Start() {
 
 function Update() {
 
+	if (stop){
+	return;
+	}
     rigidbody.freezeRotation = false;
 	
 	//transform.Translate(Vector3(0,0,1) * Time.deltaTime * walkspeed);
@@ -30,7 +34,18 @@ function Update() {
 
 function OnCollisionEnter(collision : Collision){
 	
-	transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
+	print("Collision");
+	stop = true;
+	if (collision.gameObject.tag.Equals("Objective")) {
+		//set to win
+		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
+		print("Win");
+		}
+	if (collision.gameObject.tag.Equals("Failure")) {
+		//set to lose
+		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
+		print("Lose");
+		}
 	
 	}
 	
