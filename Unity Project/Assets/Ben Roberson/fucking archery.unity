@@ -444,6 +444,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ee3681c36a290094f922544352189f52, type: 2}
+    - target: {fileID: 100004, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
+      propertyPath: m_TagString
+      value: Failure
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
   m_RootGameObject: {fileID: 1191204839}
@@ -555,6 +559,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ee3681c36a290094f922544352189f52, type: 2}
+    - target: {fileID: 100004, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
+      propertyPath: m_TagString
+      value: Failure
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
   m_RootGameObject: {fileID: 1039042244}
@@ -1118,9 +1126,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 937085635}
   - 95: {fileID: 937085636}
+  - 136: {fileID: 937085637}
   m_Layer: 0
   m_Name: shoot_target
-  m_TagString: Untagged
+  m_TagString: Failure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,6 +1160,19 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
+--- !u!136 &937085637
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937085634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .699999988
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.79999995, z: 1.20000005}
 --- !u!1 &1039042244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,9 +1182,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1039042245}
   - 95: {fileID: 1039042246}
+  - 136: {fileID: 1039042247}
   m_Layer: 0
   m_Name: shoot_target
-  m_TagString: Untagged
+  m_TagString: Failure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,6 +1216,19 @@ Animator:
   m_CullingMode: 1
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
+--- !u!136 &1039042247
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1039042244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .699999988
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.79999995, z: 1.20000005}
 --- !u!1 &1105452404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkspeed: 2.5
   rotspeed: 20
+  stop: 0
 --- !u!54 &1143962985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1345,7 +1382,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143962981}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: .0299999993, y: .0299999993, z: .349999994}
@@ -1359,9 +1396,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 1191204841}
   - 95: {fileID: 1191204840}
+  - 136: {fileID: 1191204842}
   m_Layer: 0
   m_Name: shoot_target
-  m_TagString: Untagged
+  m_TagString: Failure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1392,6 +1430,19 @@ Transform:
   - {fileID: 469730159}
   - {fileID: 1565895040}
   m_Father: {fileID: 0}
+--- !u!136 &1191204842
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191204839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .699999988
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.79999995, z: 1.20000005}
 --- !u!1 &1207885128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,6 +1605,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ee3681c36a290094f922544352189f52, type: 2}
+    - target: {fileID: 100004, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
+      propertyPath: m_TagString
+      value: Failure
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd99b82b43553b4baedede1087d2d80, type: 3}
   m_RootGameObject: {fileID: 937085634}
@@ -2163,12 +2218,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 2022462068}
   - 33: {fileID: 2022462067}
-  - 65: {fileID: 2022462066}
   - 23: {fileID: 2022462065}
   - 54: {fileID: 2022462069}
+  - 65: {fileID: 2022462066}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2198,7 +2253,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022462064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
