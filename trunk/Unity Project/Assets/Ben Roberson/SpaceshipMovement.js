@@ -43,7 +43,7 @@ function OnCollisionEnter(collision : Collision){
 		
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		print("Win");
-		stop = true;
+		//stop = true;
 		}
 	else if (collision.gameObject.tag.Equals("Failure")) {
 		//set to lose
