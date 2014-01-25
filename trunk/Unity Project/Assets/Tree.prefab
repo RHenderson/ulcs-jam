@@ -101,6 +101,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ShadowTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7c3e0b07e60c42340b0bc4bd684fffe8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _BumpSpecMap
         second:
           m_Texture: {fileID: 2800000, guid: 80c17c6715afefd4e88743a55bf5ce02, type: 3}
@@ -113,22 +120,11 @@ Material:
           m_Texture: {fileID: 2800000, guid: 66ed4cc6a45dc0643bf6e223a43872f1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ShadowTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 7c3e0b07e60c42340b0bc4bd684fffe8, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Cutoff
         second: .300000012
-      data:
-        first:
-          name: _SquashAmount
-        second: 1
       data:
         first:
           name: _TranslucencyViewDependency
@@ -137,6 +133,10 @@ Material:
         first:
           name: _ShadowStrength
         second: .800000012
+      data:
+        first:
+          name: _SquashAmount
+        second: 1
       data:
         first:
           name: _ShadowOffsetScale
@@ -148,12 +148,12 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Scale
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _TranslucencyColor
         second: {r: .730000019, g: .850000024, b: .409999996, a: 1}
+      data:
+        first:
+          name: _Scale
+        second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
