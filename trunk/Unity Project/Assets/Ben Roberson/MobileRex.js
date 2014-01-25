@@ -6,8 +6,8 @@ var stop: boolean = false;
 function Start () {
     var pointA = transform.position;
     while (!stop) {
-        yield MoveObject(transform, pointA, pointB, 3.0);
-        yield MoveObject(transform, pointB, pointA, 3.0);
+        yield MoveObject(transform, pointA, pointB, 2.0);
+        yield MoveObject(transform, pointB, pointA, 2.0);
     }
 }
  
