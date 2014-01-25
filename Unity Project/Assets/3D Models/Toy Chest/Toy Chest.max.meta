@@ -6,15 +6,20 @@ ModelImporter:
     100000: Box001
     100002: Object001
     100004: //RootNode
+    100006: Object002
     400000: Box001
     400002: Object001
     400004: //RootNode
+    400006: Object002
     2300000: Box001
     2300002: Object001
+    2300004: Object002
     3300000: Box001
     3300002: Object001
+    3300004: Object002
     4300000: Box001
     4300002: Object001
+    4300004: Object002
     9500000: //RootNode
   materials:
     importMaterials: 1
