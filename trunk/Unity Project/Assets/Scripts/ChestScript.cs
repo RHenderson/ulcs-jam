@@ -10,20 +10,25 @@ public class ChestScript : MonoBehaviour
 	void Start ()
 	{
 		clickedLid = false;
-	
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		
+		if (clickedLid)
+		{
+			//makes the lid spin
+			transform.Rotate(new Vector3 (90, 0, 0) * Time.deltaTime);
+			
+			if (transform.localEulerAngles.x > 350)
+				clickedLid = false;
+		}
 	
 	}
 	
 	public void Open ()
 	{
-		if (!clickedLid) {
-			transform.Rotate (new Vector3 (90, 0, 0));
-			clickedLid = true;
-		}
+		clickedLid = true;
 	}
 }
