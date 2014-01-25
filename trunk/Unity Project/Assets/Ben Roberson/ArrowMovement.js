@@ -50,6 +50,8 @@ function OnCollisionEnter(collision : Collision){
 		print("Lose");
 		stop = true;
 		}
+	else if (collision.gameObject.tag.Equals("Archer")) {
+		}
 	else {
 		transform.position = startpos;
 		}
