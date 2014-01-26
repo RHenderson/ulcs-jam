@@ -5,6 +5,7 @@ var rotspeed: float = 20.0;
 var stop: boolean = false;
 var startpos: Vector3;
 var score: int = 0;
+var particleTRex: ParticleSystem;
 
 function Start() {
 
@@ -32,7 +33,13 @@ function Update() {
     if (Input.GetKey("o")) transform.Rotate(Vector3(0, 1, 0) * Time.deltaTime * 5 * rotspeed);
     if (Input.GetKey("l")) transform.Rotate(Vector3(0, 0, 1) * Time.deltaTime * 5 * rotspeed);
     if (Input.GetKey("j")) transform.Rotate(Vector3(0, 0, -1) * Time.deltaTime * 5 * rotspeed);
-    if (Input.GetKey("left shift") && Input.GetKey("w")) transform.Translate(Vector3(0, -2, 0) * Time.deltaTime * walkspeed);
+    if (Input.GetKey("left shift") && Input.GetKey("w")) {
+    	transform.Translate(Vector3(0, -2.5, 0) * Time.deltaTime * walkspeed);
+    	particleTRex.Play();
+    }
+    else {
+    	particleTRex.Stop();
+    }
 }
 
 function OnCollisionEnter(collision : Collision){
