@@ -53,12 +53,9 @@ public class RoomInputScript : MonoBehaviour
 		
 		yield return new WaitForSeconds(1);
 		
-		while (fade.material.color.a <= 0.99f) {
-			fade.material.color = Color.Lerp(fade.material.color, targetColour, shrinkRate * Time.deltaTime);
-			yield return new WaitForEndOfFrame();
-		}
+		FadeScript.Instance.FadeOut();
 		
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(5);
 		
 		mem.MoveLevel ();
 	}
