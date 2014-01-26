@@ -58127,7 +58127,7 @@ MonoBehaviour:
   scoreText: {fileID: 1080135462}
   clip: {fileID: 11550273}
   timeText: {fileID: 1763954412}
-  targetScore: 60000
+  targetScore: 50000
   successClip: {fileID: 1243050889}
   targetText: {fileID: 597221712}
   objectiveText: {fileID: 1979773761}
