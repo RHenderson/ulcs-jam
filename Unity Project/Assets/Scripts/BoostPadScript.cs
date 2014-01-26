@@ -8,6 +8,6 @@ public class BoostPadScript : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider car) {
 		Debug.Log(car.gameObject);
-		car.attachedRigidbody.AddForce(boost, ForceMode.VelocityChange);
+		car.attachedRigidbody.AddForce(car.transform.TransformDirection(Vector3.forward * 10), ForceMode.VelocityChange);
 	}
 }
