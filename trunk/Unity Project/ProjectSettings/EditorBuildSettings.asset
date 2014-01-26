@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scene/JungleScene.unity
   - enabled: 1
     path: Assets/Scene/fucking archery.unity
+  - enabled: 1
+    path: Assets/wonderful will-01.unity

@@ -7,11 +7,17 @@ public class SmashBrosHandler : MonoBehaviour {
 	private static SmashBrosHandler instance;
 	
 	private float currentTime = 0;
-	[SerializeField] private float maxTime = 30;
+	[SerializeField] private float maxTime = 50;
 	private int score = 0;
 	[SerializeField] GUIText scoreText;
 	[SerializeField]
 	private AudioSource clip;
+	[SerializeField] GUIText timeText;
+	[SerializeField] int targetScore = 20000;
+	[SerializeField]
+	private AudioSource successClip;
+	[SerializeField] GUIText targetText;
+	
 	// Use this for initialization
 	void Awake () {
 		instance = this;
@@ -22,18 +28,25 @@ public class SmashBrosHandler : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	currentTime += Time.deltaTime;
-		if (currentTime > maxTime){
-		}
+	void Update () {	
 		
+		currentTime += Time.deltaTime;	
+		timeText.text = (80 - currentTime).ToString("f1");
+		targetText.text = "Target: " + targetScore.ToString();
+	
+		if (currentTime > maxTime){
+			//Application.LoadLevel.0;
+		}
 	}
 	
 	public void updateScore(int amount){
 		if (currentTime > 2){
 		score += amount;
-		scoreText.text = score.ToString();
-			if (score % 100 == 0){
+		scoreText.text = "Score: " + score.ToString();
+			if ((score>targetScore) && (score%100 == 0)){
+				successClip.audio.Play();
+				Debug.Log(score);
+			} else if (score % 500 == 0){
 			clip.audio.Play();
 			}
 		}
