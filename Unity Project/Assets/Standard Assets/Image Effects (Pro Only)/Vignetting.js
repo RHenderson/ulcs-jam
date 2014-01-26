@@ -33,6 +33,8 @@ class Vignetting /* And Chromatic Aberration */ extends PostEffectsBase {
 	
 	public var chromAberrationShader : Shader;
 	private var chromAberrationMaterial : Material;
+
+    public var myIntense : float;
 	
 	function CheckResources () : boolean {	
 		CheckSupport (false);	
@@ -48,8 +50,12 @@ class Vignetting /* And Chromatic Aberration */ extends PostEffectsBase {
 
     function ChangeIntensity(amount : float) 
     {
-        print(amount);
-        intensity = amount;
+        myIntense = amount;
+    }
+
+    function Update()
+    {
+        intensity = myIntense;
     }
 	
 	function OnRenderImage (source : RenderTexture, destination : RenderTexture) {	
