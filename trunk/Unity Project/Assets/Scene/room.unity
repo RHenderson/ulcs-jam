@@ -8797,6 +8797,7 @@ MonoBehaviour:
   separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
   chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
     type: 3}
+  myIntense: 8
 --- !u!1 &1547574138
 GameObject:
   m_ObjectHideFlags: 0

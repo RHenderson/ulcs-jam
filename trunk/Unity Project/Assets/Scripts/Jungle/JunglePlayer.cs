@@ -29,6 +29,7 @@ public class JunglePlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         m_GoldNumberText.text = 0 + "/" + m_GoldToCollect;
+        SpawnLocation = transform.position;
 	}
 
     public bool HasEnoughGold()
