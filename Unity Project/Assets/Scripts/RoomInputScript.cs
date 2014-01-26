@@ -37,7 +37,7 @@ public class RoomInputScript : MonoBehaviour
 				}
 				
 				if (hit.transform.tag == "Memento") {
-					audio.Play ();
+					audio.Play();
 					StartCoroutine (LevelTransistion (hit.collider.gameObject.GetComponent<MementoScript> ()));
 				}
 			}
@@ -54,7 +54,7 @@ public class RoomInputScript : MonoBehaviour
 		yield return new WaitForSeconds(1);
 		
 		while (fade.material.color.a <= 0.99f) {
-			fade.material.color = Color.Lerp (fade.material.color, targetColour, shrinkRate * Time.deltaTime);
+			fade.material.color = Color.Lerp(fade.material.color, targetColour, shrinkRate * Time.deltaTime);
 			yield return new WaitForEndOfFrame();
 		}
 		
