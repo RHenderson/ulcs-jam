@@ -37,7 +37,7 @@ public class FinalSceneScript : InteractiveObject {
             yield return new WaitForEndOfFrame();
         }
         if (FadeScript.Instance)
-            FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE, 0);
+            FadeScript.Instance.Finish(FadeScript.LevelCode.WIN, 0);
         while (Vector3.Distance(m_SpaceShip.position, m_LiftPoint.position) > 2)
         {
             m_SpaceShip.position = Vector3.Lerp(m_SpaceShip.position, m_LightSpeedPoint.position, Time.deltaTime * 4);
