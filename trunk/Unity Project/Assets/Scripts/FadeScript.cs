@@ -6,16 +6,27 @@ public class FadeScript : MonoBehaviour
 	public static FadeScript Instance {get{return instance;}}
 	private static FadeScript instance;
 	
+	public enum LevelCode {
+		WIN = 1,
+		LOSE = -1,
+		NOT_PLAYED = 0
+	}
+	
 	[SerializeField]
 	private Renderer fade;
 	[SerializeField]
 	private float speed = 5.0f;
 	private Color opaque = new Color (0, 0, 0, 1);
 	private Color transparent = new Color (0, 0, 0, 0);
+	private LevelCode[] levelProgress;
 	
 	void Awake()
 	{
 		instance = this;
+		levelProgress = new LevelCode[4];
+		
+		if (!Application.isEditor) 
+			Screen.lockCursor = true;
 	}
 	
 	void Start ()
@@ -28,6 +39,21 @@ public class FadeScript : MonoBehaviour
 	{
 			fade.material.color = opaque;
 			FadeIn();
+	}
+	
+	public int totalWins() {
+		int total = 0;
+		
+		foreach (LevelCode l in levelProgress) {
+			total += (int) l;
+		}
+		
+		return total;
+	}
+	
+	public void Finish(int level, LevelCode success) {
+		levelProgress[level] = success;
+		FadeOut();
 	}
 	
 	public void FadeIn ()
