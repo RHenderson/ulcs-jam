@@ -1,19 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class JunglePlayer : MonoBehaviour {
+public class JunglePlayer : GoldGame {
 
-    [SerializeField] private GUIText m_GoldNumberText;
     [SerializeField] private GUIText m_LifeText;
-    [SerializeField] private GUIText m_InfoText;
     [SerializeField] private FPSInputController m_FPSController;
-    [SerializeField]
-    private AudioSource m_PickupSound;
+    
 
-    [SerializeField]
-    private int m_GoldToCollect = 5;
-    public int NumberOfGold { get { return m_NumberOfGold; } }
-    private int m_NumberOfGold;
     private bool m_Posioned;
 
     [SerializeField] private float m_PosionLength;
@@ -27,8 +20,8 @@ public class JunglePlayer : MonoBehaviour {
     private int m_NumberOfLives = 3;
 
 	// Use this for initialization
-	void Start () {
-        m_GoldNumberText.text = "Gold: " + 0 + "/" + m_GoldToCollect;
+	protected override void Start () {
+        base.Start();
         SpawnLocation = transform.position;
 	}
 
@@ -50,15 +43,9 @@ public class JunglePlayer : MonoBehaviour {
         m_InfoText.enabled = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
-        if (other.name.Equals("Gold"))
-        {
-            m_PickupSound.Play();
-            DestroyObject(other.gameObject);
-            SetGold(1);
-            
-        }
+        base.OnTriggerEnter(other);
         if (other.gameObject.tag.Equals("Water"))
         {
             print(SpawnLocation);
@@ -70,11 +57,7 @@ public class JunglePlayer : MonoBehaviour {
         }
     }
 
-    private void SetGold(int amount)
-    {
-        m_NumberOfGold += amount;
-        m_GoldNumberText.text = "Gold: " + m_NumberOfGold + "/" + m_GoldToCollect;
-    }
+    
 
     private bool TakeLife()
     {
