@@ -11,12 +11,17 @@ public class SpaceGame : GoldGame {
     private float m_Timer;
 
     private bool m_Dead;
+	
+	private void Start()
+	{
+		m_Timer = m_MaxTime;
+	}
 
     private void Update()
     {
-        m_Timer += Time.deltaTime;
+        m_Timer -= Time.deltaTime;
         m_TimeText.text = "Time: " + m_Timer;
-        if (m_Timer > m_MaxTime && !m_Dead)
+        if (m_Timer < 0 && !m_Dead)
         {
 			Die();
             m_Dead = true;
