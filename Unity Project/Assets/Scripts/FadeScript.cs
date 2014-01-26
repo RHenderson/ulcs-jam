@@ -42,7 +42,7 @@ public class FadeScript : MonoBehaviour
 		
 		if (level == 0) {
 			int vignette = 8 - totalWins();
-			Camera.main.GetComponent<Vignetting>().intensity = vignette;
+			//Camera.main.GetComponent<Vignetting>().intensity = vignette;
 			Debug.Log("Vignette "+vignette);
 		}
 	}
