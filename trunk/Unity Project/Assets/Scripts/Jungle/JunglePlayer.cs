@@ -28,7 +28,7 @@ public class JunglePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        m_GoldNumberText.text = 0 + "/" + m_GoldToCollect;
+        m_GoldNumberText.text = "Gold: " + 0 + "/" + m_GoldToCollect;
         SpawnLocation = transform.position;
 	}
 
@@ -73,13 +73,13 @@ public class JunglePlayer : MonoBehaviour {
     private void SetGold(int amount)
     {
         m_NumberOfGold += amount;
-        m_GoldNumberText.text = m_NumberOfGold + "/" + m_GoldToCollect;
+        m_GoldNumberText.text = "Gold: " + m_NumberOfGold + "/" + m_GoldToCollect;
     }
 
     private bool TakeLife()
     {
         m_NumberOfLives--;
-        m_LifeText.text = m_NumberOfLives + "";
+        m_LifeText.text = "Lives: " + m_NumberOfLives;
         if (m_NumberOfLives <= 0)
         {            
             StartCoroutine(Die());
