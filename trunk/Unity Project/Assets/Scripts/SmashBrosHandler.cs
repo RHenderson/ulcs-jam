@@ -37,12 +37,10 @@ public class SmashBrosHandler : MonoBehaviour {
 		if (currentTime >= maxTime){
 			if (score >= targetScore){	
 				if (FadeScript.Instance)
-					FadeScript.Instance.Finish (FadeScript.LevelCode.WIN);
-		 		Application.LoadLevel(0);
+					FadeScript.Instance.Finish (FadeScript.LevelCode.WIN, 0);
 			}else{
 				if (FadeScript.Instance)
-					FadeScript.Instance.Finish (FadeScript.LevelCode.LOSE);
-		 		Application.LoadLevel(0);
+					FadeScript.Instance.Finish (FadeScript.LevelCode.LOSE, 0);
 			}
 		}
 		

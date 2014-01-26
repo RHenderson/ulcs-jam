@@ -64,9 +64,10 @@ public class FadeScript : MonoBehaviour
 		return total;
 	}
 	
-	public void Finish(LevelCode success) {
+	public void Finish(LevelCode success, int toLoad) {
 		levelProgress[Application.loadedLevel - 1] = success;
-		FadeOut();
+		FadeOut(toLoad);
+		
 	}
 	
 	public void FadeIn ()
@@ -74,13 +75,13 @@ public class FadeScript : MonoBehaviour
 		StartCoroutine (FadeInTransition ());
 	}
 	
-	public void FadeOut ()
+	public void FadeOut (int toLoad)
 	{
-		StartCoroutine (FadeOutTransition ());
+		StartCoroutine (FadeOutTransition (toLoad));
 	}
 	
 	//opaque to transparent
-	IEnumerator FadeOutTransition ()
+	IEnumerator FadeOutTransition (int toLoad)
 	{
 		while (fade.material.color.a <= 0.99f) {
 			fade.material.color = Color.Lerp (fade.material.color, opaque, speed * Time.deltaTime);
@@ -88,6 +89,7 @@ public class FadeScript : MonoBehaviour
 		}
 		
 		fade.material.color = opaque;
+		Application.LoadLevel(toLoad);
 	}
 	
 	IEnumerator FadeInTransition ()
