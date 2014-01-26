@@ -31,6 +31,7 @@ public class FusRoDahScript : MonoBehaviour
 						//r.mass = 0.1f;
 						r.AddExplosionForce (force, transform.position, 0);
 						clip.audio.Play();
+						SmashBrosHandler.Instance.updateScore(1);
 					//}
 				}
 			}
