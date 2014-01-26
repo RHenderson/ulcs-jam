@@ -4,8 +4,13 @@ using System.Collections;
 public class JunglePlayer : MonoBehaviour {
 
     [SerializeField] private GUIText m_GoldNumberText;
+    [SerializeField] private GUIText m_LifeText;
+    [SerializeField] private GUIText m_InfoText;
     [SerializeField] private FPSInputController m_FPSController;
 
+    [SerializeField]
+    private int m_GoldToCollect = 5;
+    public int NumberOfGold { get { return m_NumberOfGold; } }
     private int m_NumberOfGold;
     private bool m_Posioned;
 
@@ -14,15 +19,33 @@ public class JunglePlayer : MonoBehaviour {
 
     public Vector3 SpawnLocation;
 
+    [SerializeField]
+    private SepiaToneEffect m_ToneEffect;
+
+    private int m_NumberOfLives = 3;
+
 	// Use this for initialization
 	void Start () {
-	
+        m_GoldNumberText.text = 0 + "/" + m_GoldToCollect;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    public bool HasEnoughGold()
+    {
+        bool gotGold = m_NumberOfGold >= m_GoldToCollect;
+        if (!gotGold)
+        {
+            StartCoroutine(NotEnoughGold());
+        }
+        return gotGold;
+    }
+
+    private IEnumerator NotEnoughGold()
+    {
+        m_InfoText.text = "You Need More Gold To Open The Door, \n (You Must Construct Additional Pylons)";
+        m_InfoText.enabled = true;
+        yield return new WaitForSeconds(3);
+        m_InfoText.enabled = false;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -34,14 +57,41 @@ public class JunglePlayer : MonoBehaviour {
         }
         if (other.gameObject.tag.Equals("Water"))
         {
-            transform.position = SpawnLocation;
+            print(SpawnLocation);
+            if (TakeLife())
+            {
+                transform.position = SpawnLocation;  
+            }
+                      
         }
     }
 
     private void SetGold(int amount)
     {
         m_NumberOfGold += amount;
-        m_GoldNumberText.text = m_NumberOfGold + "";
+        m_GoldNumberText.text = m_NumberOfGold + "/" + m_GoldToCollect;
+    }
+
+    private bool TakeLife()
+    {
+        m_NumberOfLives--;
+        m_LifeText.text = m_NumberOfLives + "";
+        if (m_NumberOfLives <= 0)
+        {            
+            StartCoroutine(Die());
+            return false;
+        }
+        return true;
+    }
+
+    private IEnumerator Die()
+    {
+        m_InfoText.text = "Game Over";
+        m_InfoText.enabled = true;
+        m_LifeText.enabled = false;
+        m_FPSController.enabled = false;
+        yield return new WaitForSeconds(5);
+        Application.LoadLevel(0);
     }
 
     public void Posion()
@@ -52,6 +102,7 @@ public class JunglePlayer : MonoBehaviour {
         {            
             m_Posioned = true;
             m_FPSController.SendMessage("SwapInput");
+            m_ToneEffect.enabled = true;
             StartCoroutine(PosionCooldown());
         }        
     }
@@ -65,6 +116,7 @@ public class JunglePlayer : MonoBehaviour {
         }
         m_PosionTimer = 0;
         m_Posioned = false;
+        m_ToneEffect.enabled = false;
         m_FPSController.SendMessage("SwapInput");
     }
 

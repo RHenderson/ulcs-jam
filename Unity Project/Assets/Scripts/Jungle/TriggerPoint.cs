@@ -4,12 +4,16 @@ using System.Collections;
 public class TriggerPoint : MonoBehaviour {
 
     [SerializeField] private InteractiveObject[] m_InteractiveObjects;
+    [SerializeField] private JunglePlayer m_JunglePlayer;
 
     void OnTriggerEnter(Collider other)
     {
-        foreach (InteractiveObject io in m_InteractiveObjects)
+        if (m_JunglePlayer.HasEnoughGold())
         {
-            io.Interact();
-        }
+            foreach (InteractiveObject io in m_InteractiveObjects)
+            {
+                io.Interact();
+            }
+        }        
     }
 }
