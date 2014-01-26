@@ -45,6 +45,6 @@ public class SpaceGame : GoldGame {
 		m_InfoText.text = "You Win!";
 		m_InfoText.enabled = true;
         if (FadeScript.Instance)
-            FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE, 0);
+            FadeScript.Instance.Finish(FadeScript.LevelCode.WIN, 0);
     }
 }
