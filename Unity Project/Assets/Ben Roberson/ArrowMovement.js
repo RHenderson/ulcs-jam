@@ -41,7 +41,7 @@ function OnCollisionEnter(collision : Collision) {
 		//set to win
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		stop = true;
-		FadeScript.Finish();
+//		FadeScript.Finish();
 	} else if (collision.gameObject.tag.Equals("Failure")) {
 		//set to lose
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
