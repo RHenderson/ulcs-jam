@@ -5,6 +5,7 @@ public class ChestScript : MonoBehaviour
 {
 	
 	private bool clickedLid;
+    private bool clicked;
 
 	// Use this for initialization
 	void Start ()
@@ -29,6 +30,10 @@ public class ChestScript : MonoBehaviour
 	
 	public void Open ()
 	{
-		clickedLid = true;
+        if (!clicked)
+        {
+            clicked = true;
+            clickedLid = true;
+        }
 	}
 }
