@@ -68,7 +68,7 @@ public class SmashBrosHandler : MonoBehaviour {
 	}
 	
 	public void updateScore(int amount){
-		if (currentTime > 2){
+		if (canScore()){
 		score += amount;
 		scoreText.text = "Score: " + score.ToString();
 			if ((score>=targetScore) && (score%100 == 0)){
@@ -79,5 +79,10 @@ public class SmashBrosHandler : MonoBehaviour {
 			clip.audio.Play();
 			}
 		}
+	}
+	
+	public bool canScore()
+	{
+		return currentTime > 2;
 	}
 }
