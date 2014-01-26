@@ -54181,7 +54181,7 @@ GUIText:
   m_GameObject: {fileID: 1080135461}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Score:'
+  m_Text: 'Score: 0'
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -58123,11 +58123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236b8fe184c4e104d8190b28f8fa05b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 80
+  maxTime: 100
   scoreText: {fileID: 1080135462}
   clip: {fileID: 11550273}
   timeText: {fileID: 1763954412}
-  targetScore: 20000
+  targetScore: 60000
   successClip: {fileID: 1243050889}
   targetText: {fileID: 597221712}
   objectiveText: {fileID: 1979773761}
