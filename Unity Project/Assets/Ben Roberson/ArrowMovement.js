@@ -2,11 +2,12 @@
 
 var walkspeed: float = 5.0;
 var rotspeed: float = 1.0;
-var stop: boolean = false;
+var stop : boolean = true;
 var startpos: Vector3;
 var score: int = 0;
+var arrows: int = 3;
 
-
+public var arrowText : GUIText;
 public var hack : GameObject;
 
 function Start() {
@@ -15,6 +16,10 @@ function Start() {
 }
 
 function Update() {
+
+	if (Input.GetKey(KeyCode.Space)) {
+		stop = false;
+	}
 
 	if (!stop) {
     //rigidbody.freezeRotation = false;
@@ -37,20 +42,26 @@ function Update() {
     }
 }
 
+ function RemoveArrow()
+    {
+        arrows--;
+        arrowText.text = "Arrows: " + arrows;
+        if (arrows <= 0)
+        {            
+        	hack.SendMessage("Finish", -1);
+        }
+    }
+
 function OnCollisionEnter(collision : Collision) {
 	
-	print("Collision");	
 	if (collision.gameObject.tag.Equals("Objective")) {
 		//set to win
-		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		stop = true;
 		hack.SendMessage("Finish", 1);
 	} else if (collision.gameObject.tag.Equals("Failure")) {
 		//set to lose
-		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
-		hack.SendMessage("Finish", -1);
+		RemoveArrow();
 		stop = true;
-	} else {
 		transform.position = startpos;
 	}
 	
