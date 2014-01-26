@@ -39,6 +39,12 @@ public class FadeScript : MonoBehaviour
 	{
 			fade.material.color = opaque;
 			FadeIn();
+		
+		if (level == 0) {
+			int vignette = 8 - totalWins();
+			Camera.main.GetComponent<Vignetting>().intensity = vignette;
+			Debug.Log("Vignette "+vignette);
+		}
 	}
 	
 	public int totalWins() {
