@@ -94,7 +94,7 @@ public class JunglePlayer : MonoBehaviour {
         m_LifeText.enabled = false;
         m_FPSController.enabled = false;
         if(FadeScript.Instance)
-            FadeScript.Instance.FadeOut();
+            FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE);
         yield return new WaitForSeconds(5);
         Application.LoadLevel(0);
     }
