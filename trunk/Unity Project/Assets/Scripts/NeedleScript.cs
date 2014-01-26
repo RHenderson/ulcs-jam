@@ -23,7 +23,7 @@ public class NeedleScript : MonoBehaviour {
         transform.Translate(Vector3.forward * speed);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {

@@ -32,6 +32,10 @@ public class JunglePlayer : MonoBehaviour {
             SetGold(1);
             
         }
+        if (other.gameObject.tag.Equals("Water"))
+        {
+            transform.position = SpawnLocation;
+        }
     }
 
     private void SetGold(int amount)
@@ -59,6 +63,7 @@ public class JunglePlayer : MonoBehaviour {
             m_PosionTimer += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        m_PosionTimer = 0;
         m_Posioned = false;
         m_FPSController.SendMessage("SwapInput");
     }
