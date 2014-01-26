@@ -1668,7 +1668,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3440,8 +3440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc24dbe6054e0c34f9245ffd05ec8930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: I was the best damn pilot they had
   sceneToLoad: 4
-  description: I was the best damn fighter pilot they ever saw.
 --- !u!65 &709595293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3600,8 +3600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc24dbe6054e0c34f9245ffd05ec8930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 2
   description: I used to just run the arrow into targets
+  sceneToLoad: 2
 --- !u!65 &717974145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7549,8 +7549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc24dbe6054e0c34f9245ffd05ec8930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 1
   description: In the garden I would pretend I was an explorer
+  sceneToLoad: 1
 --- !u!1 &1346316268
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,8 +8701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc24dbe6054e0c34f9245ffd05ec8930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: My best action figure that could destroy all the other toys
   sceneToLoad: 3
-  description: My best action figure that could destroy all other toys
 --- !u!65 &1524687905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8783,7 +8783,6 @@ GameObject:
   - 124: {fileID: 1538857933}
   - 114: {fileID: 1538857932}
   - 81: {fileID: 1538857931}
-  - 82: {fileID: 1538857936}
   - 114: {fileID: 1538857937}
   m_Layer: 0
   m_Name: Main Camera
@@ -8798,8 +8797,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: f8920c3f60d1cc54bb553301daf41f59, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1538857929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -.0658287555, y: 0, z: 0, w: .997830987}
+  m_LocalPosition: {x: 0, y: 2.86863136, z: .00866699219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2044563094}
@@ -8876,64 +8875,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
---- !u!82 &1538857936
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1538857929}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f46f3a652f1f52842811660459a26d2a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!114 &1538857937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9692,7 +9633,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1664786746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.37285614, z: -8.78406429}
+  m_LocalPosition: {x: 2.68450689, y: 7.37285614, z: 12.3795052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1538857930}
@@ -10104,9 +10045,11 @@ GameObject:
   - 4: {fileID: 1727783629}
   - 33: {fileID: 1727783631}
   - 23: {fileID: 1727783630}
+  - 114: {fileID: 1727783632}
+  - 65: {fileID: 1727783633}
   m_Layer: 0
   m_Name: Thin Paperback
-  m_TagString: Untagged
+  m_TagString: Description
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10149,6 +10092,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727783628}
   m_Mesh: {fileID: 4300170, guid: 9eb4d689eea78e54da10689d7d578cef, type: 3}
+--- !u!114 &1727783632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727783628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d03ad3b8bbac9408af099a9ac85034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 'Credits: Ben Roberson, John Gillott, Mark Dolby, Ross Henderson &
+    Will Whelehan'
+--- !u!65 &1727783633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1727783628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .027157668, y: .369140357, z: .286699355}
+  m_Center: {x: -.00135755388, y: .0150382966, z: -.032332547}
 --- !u!1 &1731152232
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,15 +45,18 @@ public class RoomInputScript : MonoBehaviour
 
         if (Physics.Raycast(cam.position, cam.forward, out hit, 10))
         {
-            if (hit.transform.tag == "Memento" || hit.transform.tag == "Lid")
+            if (hit.transform.tag == "Memento" || hit.transform.tag == "Lid" || hit.transform.tag == "Description")
             {
                 indicator.material.color = Color.green;
-                m_ClickToInteractText.enabled = true;
+                if(hit.transform.tag == "Memento" || hit.transform.tag == "Lid"){
+					m_ClickToInteractText.enabled = true;
+				}
 
-                if (hit.transform.tag == "Memento")
+                if (hit.transform.tag == "Memento" || hit.transform.tag == "Description")
                 {
                     m_InfoDisplay.enabled = true;
-                    m_InfoDisplay.text = hit.collider.gameObject.GetComponent<MementoScript>().description;
+                    m_InfoDisplay.text = hit.collider.gameObject.GetComponent<DescriptionScript>().description;
+					
                 }
 
             }
