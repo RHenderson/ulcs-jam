@@ -18,16 +18,14 @@ public class SpaceGame : GoldGame {
         m_TimeText.text = "Time: " + m_Timer;
         if (m_Timer > m_MaxTime && !m_Dead)
         {
-			if(m_NumberOfGold >= m_GoldToCollect) {
-				Win();
-			}
-			else {
-				Die();
-			}
+			Die();
             m_Dead = true;
-            //Die();
         }
-    }
+    if(m_NumberOfGold >= m_GoldToCollect && !m_Dead) {
+				Win();
+			m_Dead = true; 
+			}
+	}
 
     private void Die()
     {
