@@ -3066,7 +3066,11 @@ Prefab:
     - target: {fileID: 2300000, guid: 560e4fe5e5d3fae43a7a9acf4ca3671a, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14fe7fd1835ef6646aaf443debc37674, type: 2}
+      objectReference: {fileID: 2100000, guid: edd1df170fad79f41994f6f2f16d7ed8, type: 2}
+    - target: {fileID: 100000, guid: 560e4fe5e5d3fae43a7a9acf4ca3671a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 560e4fe5e5d3fae43a7a9acf4ca3671a, type: 2}
   m_RootGameObject: {fileID: 827397231}
@@ -7667,7 +7671,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 14fe7fd1835ef6646aaf443debc37674, type: 2}
+  - {fileID: 2100000, guid: edd1df170fad79f41994f6f2f16d7ed8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8786,7 +8790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
-  intensity: 8
+  intensity: 0
   chromaticAberration: .200000003
   axialAberration: .5
   blur: 0
@@ -8797,7 +8801,7 @@ MonoBehaviour:
   separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
   chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
     type: 3}
-  myIntense: 8
+  myIntense: 0
 --- !u!1 &1547574138
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class FadeScript : MonoBehaviour
 	
 	void Start ()
 	{
-        levelProgress = new LevelCode[4];
+        levelProgress = new LevelCode[4]{0,0,0,0};
 		fade.material.color = opaque;
 		FadeIn();
 	}
@@ -70,13 +70,17 @@ public class FadeScript : MonoBehaviour
 		
 	}
 	
+	public bool LevelPlayed(int toLoad) {
+		return (int) levelProgress[toLoad - 1] == 0;
+	}
+	
 	public void FadeIn ()
 	{
 		StartCoroutine (FadeInTransition ());
 	}
 	
 	public void FadeOut (int toLoad)
-	{
+	{		
 		StartCoroutine (FadeOutTransition (toLoad));
 	}
 	

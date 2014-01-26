@@ -66,8 +66,11 @@ public class RoomInputScript : MonoBehaviour
 
                 if (hit.transform.tag == "Memento")
                 {
-                    audio.Play();
-                    StartCoroutine(LevelTransistion(hit.collider.gameObject.GetComponent<MementoScript>()));
+					MementoScript mem = hit.collider.gameObject.GetComponent<MementoScript>();
+					if (FadeScript.Instance.LevelPlayed(mem.sceneToLoad)) {
+                    	audio.Play();
+                    	StartCoroutine(LevelTransistion(mem));
+					}
                 }
             }
         }
