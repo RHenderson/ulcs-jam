@@ -19,6 +19,7 @@ public class FadeScript : MonoBehaviour
 	private Color opaque = new Color (0, 0, 0, 1);
 	private Color transparent = new Color (0, 0, 0, 0);
 	private LevelCode[] levelProgress;
+	private bool appearSpaceShip = false;
 	
 	void Awake()
 	{

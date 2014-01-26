@@ -11682,7 +11682,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 645254499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.7714977, y: 255.643219, z: 35.7299767}
+  m_LocalPosition: {x: 30.0378914, y: 255.643219, z: 32.1119461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1365783647}
@@ -11802,11 +11802,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_GoldNumberText: {fileID: 398757719}
-  m_LifeText: {fileID: 1939133852}
-  m_InfoText: {fileID: 497133213}
-  m_FPSController: {fileID: 645254501}
   m_PickupSound: {fileID: 645254507}
+  m_InfoText: {fileID: 497133213}
   m_GoldToCollect: 8
+  m_LifeText: {fileID: 1939133852}
+  m_FPSController: {fileID: 645254501}
   m_PosionLength: 4
   SpawnLocation: {x: 0, y: 0, z: 0}
   m_ToneEffect: {fileID: 852372897}
