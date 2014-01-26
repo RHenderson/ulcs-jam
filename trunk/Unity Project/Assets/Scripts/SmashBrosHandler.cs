@@ -17,6 +17,10 @@ public class SmashBrosHandler : MonoBehaviour {
 	[SerializeField]
 	private AudioSource successClip;
 	[SerializeField] GUIText targetText;
+	[SerializeField] GUIText objectiveText;
+	[SerializeField] ParticleSystem sparks;
+	[SerializeField] private AudioSource nearlyUp;
+	[SerializeField] private AudioSource music;
 	
 	// Use this for initialization
 	void Awake () {
@@ -34,6 +38,19 @@ public class SmashBrosHandler : MonoBehaviour {
 		timeText.text = (maxTime - currentTime).ToString("f1");
 		targetText.text = "Target: " + targetScore.ToString();
 		
+		if ((maxTime-currentTime)<24 && (maxTime-currentTime)>23.9)
+			nearlyUp.audio.Play();
+		
+		if ((maxTime-currentTime)<20 && (maxTime-currentTime)>10)
+			music.audio.pitch = 1.5f;
+		
+		if ((maxTime-currentTime)<=10 && (maxTime-currentTime)>5)
+			music.audio.pitch = 1.75f;
+		
+		if ((maxTime-currentTime)<=5 )
+			music.audio.pitch = 2.0f;
+		
+		
 		if (currentTime >= maxTime){
 			if (score >= targetScore){	
 				if (FadeScript.Instance)
@@ -44,6 +61,9 @@ public class SmashBrosHandler : MonoBehaviour {
 			}
 		}
 		
+		if (currentTime > 4)
+			objectiveText.enabled=false;
+		
 	}
 	
 	public void updateScore(int amount){
@@ -53,7 +73,8 @@ public class SmashBrosHandler : MonoBehaviour {
 			if ((score>targetScore) && (score%100 == 0)){
 				successClip.audio.Play();
 				Debug.Log(score);
-			} else if (score % 500 == 0){
+				sparks.Play();
+			} else if (score % 400 == 0){
 			clip.audio.Play();
 			}
 		}
