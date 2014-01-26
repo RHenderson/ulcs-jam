@@ -97522,7 +97522,7 @@ GUIText:
   m_GameObject: {fileID: 1979773759}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Smash as much as you can to reach the target score in time!!!
+  m_Text: Smash as much as you can!!!
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
