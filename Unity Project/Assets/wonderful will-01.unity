@@ -58123,7 +58123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236b8fe184c4e104d8190b28f8fa05b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTime: 100
+  maxTime: 80
   scoreText: {fileID: 1080135462}
   clip: {fileID: 11550273}
   timeText: {fileID: 1763954412}
