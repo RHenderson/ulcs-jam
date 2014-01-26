@@ -22,8 +22,11 @@ public class FadeScript : MonoBehaviour
 	
 	void Awake()
 	{
-		instance = this;
-		levelProgress = new LevelCode[4];
+        if (FadeScript.Instance != null && !FadeScript.Instance.Equals(this))
+            DestroyImmediate(transform.parent.gameObject);            
+        else
+            instance = this;
+		
 		
 		if (!Application.isEditor) 
 			Screen.lockCursor = true;
@@ -31,8 +34,9 @@ public class FadeScript : MonoBehaviour
 	
 	void Start ()
 	{
-			fade.material.color = opaque;
-			FadeIn();
+        levelProgress = new LevelCode[4];
+		fade.material.color = opaque;
+		FadeIn();
 	}
 	
 	void OnLevelWasLoaded (int level)
@@ -41,9 +45,12 @@ public class FadeScript : MonoBehaviour
 			FadeIn();
 		
 		if (level == 0) {
-			int vignette = 8 - totalWins();
-			//Camera.main.GetComponent<Vignetting>().intensity = vignette;
-			Debug.Log("Vignette "+vignette);
+            if (FadeScript.Instance != null && !FadeScript.Instance.Equals(this))
+                DestroyImmediate(transform.parent.gameObject);    
+            
+			float vignette = 8 - totalWins();
+            Camera.main.gameObject.SendMessage("ChangeIntensity", vignette);
+            Debug.Log("Vignette " + vignette + " " + (Camera.main.GetComponent<Vignetting>() != null));
 		}
 	}
 	
@@ -53,7 +60,7 @@ public class FadeScript : MonoBehaviour
 		foreach (LevelCode l in levelProgress) {
 			total += (int) l;
 		}
-		
+        print(total);
 		return total;
 	}
 	
