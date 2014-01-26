@@ -20,7 +20,7 @@ public class SpaceGame : GoldGame {
     private void Update()
     {
         m_Timer -= Time.deltaTime;
-        m_TimeText.text = "Time: " + m_Timer;
+        m_TimeText.text = "Time: " + (int)m_Timer;
         if (m_Timer < 0 && !m_Dead)
         {
 			Die();
