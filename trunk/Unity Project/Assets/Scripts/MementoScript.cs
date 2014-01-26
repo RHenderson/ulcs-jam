@@ -7,6 +7,8 @@ public class MementoScript : MonoBehaviour
 	private int sceneToLoad;
 	
 	private Color startcolor;
+
+    public string description;
 	
 	public void MoveLevel ()
 	{

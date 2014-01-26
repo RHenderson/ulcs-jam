@@ -7,6 +7,8 @@ public class JunglePlayer : MonoBehaviour {
     [SerializeField] private GUIText m_LifeText;
     [SerializeField] private GUIText m_InfoText;
     [SerializeField] private FPSInputController m_FPSController;
+    [SerializeField]
+    private AudioSource m_PickupSound;
 
     [SerializeField]
     private int m_GoldToCollect = 5;
@@ -51,6 +53,7 @@ public class JunglePlayer : MonoBehaviour {
     {
         if (other.name.Equals("Gold"))
         {
+            m_PickupSound.Play();
             DestroyObject(other.gameObject);
             SetGold(1);
             
@@ -90,6 +93,8 @@ public class JunglePlayer : MonoBehaviour {
         m_InfoText.enabled = true;
         m_LifeText.enabled = false;
         m_FPSController.enabled = false;
+        if(FadeScript.Instance)
+            FadeScript.Instance.FadeOut();
         yield return new WaitForSeconds(5);
         Application.LoadLevel(0);
     }

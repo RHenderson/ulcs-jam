@@ -12,6 +12,17 @@ public class RoomInputScript : MonoBehaviour
 	private float minScale = 0.3f;
 	[SerializeField]
 	private Renderer indicator;
+
+    [SerializeField]
+    private GUIText m_InfoDisplay;
+    [SerializeField]
+    private GUIText m_ClickToInteractText;
+
+    void Start()
+    {
+        m_ClickToInteractText.enabled = false;
+        m_InfoDisplay.enabled = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -19,25 +30,49 @@ public class RoomInputScript : MonoBehaviour
 	
 		Transform cam = Camera.main.transform;
 		RaycastHit hit = new RaycastHit ();
-		
-		
-		if (Physics.Raycast (cam.position, cam.forward, out hit, 10)) {
-			if (hit.transform.tag == "Memento")
-				indicator.material.color = Color.green;
-			else
-				indicator.material.color = Color.white;
-				
-			if (Input.GetMouseButtonDown (0)) {
-				if (hit.transform.tag == "Lid") {
-					hit.collider.gameObject.GetComponent<ChestScript> ().Open ();
-				}
-				
-				if (hit.transform.tag == "Memento") {
-					audio.Play ();
-					StartCoroutine (LevelTransistion (hit.collider.gameObject.GetComponent<MementoScript> ()));
-				}
-			}
-		}
+
+
+        if (Physics.Raycast(cam.position, cam.forward, out hit, 10))
+        {
+            if (hit.transform.tag == "Memento" || hit.transform.tag == "Lid")
+            {
+                indicator.material.color = Color.green;
+                m_ClickToInteractText.enabled = true;
+
+                if (hit.transform.tag == "Memento")
+                {
+                    m_InfoDisplay.enabled = true;
+                    m_InfoDisplay.text = hit.collider.gameObject.GetComponent<MementoScript>().description;
+                }
+
+            }
+            else
+            {
+                indicator.material.color = Color.white;
+                m_ClickToInteractText.enabled = false;
+                m_InfoDisplay.enabled = false;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (hit.transform.tag == "Lid")
+                {
+                    hit.collider.gameObject.GetComponent<ChestScript>().Open();
+                }
+
+                if (hit.transform.tag == "Memento")
+                {
+                    audio.Play();
+                    StartCoroutine(LevelTransistion(hit.collider.gameObject.GetComponent<MementoScript>()));
+                }
+            }
+        }
+        else
+        {
+            indicator.material.color = Color.white;
+            m_ClickToInteractText.enabled = false;
+            m_InfoDisplay.enabled = false;
+        }
 	}
 	
 	IEnumerator LevelTransistion (MementoScript mem)
