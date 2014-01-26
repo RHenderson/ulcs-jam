@@ -12,6 +12,8 @@ public class RoomInputScript : MonoBehaviour
 	private float minScale = 0.3f;
 	[SerializeField]
 	private Renderer indicator;
+	[SerializeField]
+	private Renderer spaceShipRenderer;
 
     [SerializeField]
     private GUIText m_InfoDisplay;
@@ -26,6 +28,11 @@ public class RoomInputScript : MonoBehaviour
         m_ClickToInteractText.enabled = false;
         m_InfoDisplay.enabled = false;
         m_Vignetting.intensity += FadeScript.Instance.totalWins();
+		
+		if (!FadeScript.Instance.LevelPlayed(1)) {
+			spaceShipRenderer.enabled = true;
+			spaceShipRenderer.collider.enabled = true;
+		}
     }
 	
 	// Update is called once per frame
