@@ -45,6 +45,12 @@ class Vignetting /* And Chromatic Aberration */ extends PostEffectsBase {
 			ReportAutoDisable ();
 		return isSupported;		
 	}
+
+    function ChangeIntensity(amount : float) 
+    {
+        print(amount);
+        intensity = amount;
+    }
 	
 	function OnRenderImage (source : RenderTexture, destination : RenderTexture) {	
 		if( CheckResources () == false) {
