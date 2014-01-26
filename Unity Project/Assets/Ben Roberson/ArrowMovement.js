@@ -6,6 +6,9 @@ var stop: boolean = false;
 var startpos: Vector3;
 var score: int = 0;
 
+
+public var hack : GameObject;
+
 function Start() {
 
 	startpos = transform.position;
@@ -29,7 +32,7 @@ function Update() {
     if (Input.GetKey("d")) transform.Rotate(Vector3(0, 1, 0) * Time.deltaTime * 5 * rotspeed);
     //if (Input.GetKey("u")) transform.Rotate(Vector3(0, 0, 1) * Time.deltaTime * 5 * rotspeed);
     //if (Input.GetKey("o"))
-    transform.Rotate(Vector3(0, 0, -1) * Time.deltaTime * 5 * rotspeed);
+    //transform.Rotate(Vector3(0, 0, -1) * Time.deltaTime * 5 * rotspeed);
     
     }
 }
@@ -41,11 +44,11 @@ function OnCollisionEnter(collision : Collision) {
 		//set to win
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
 		stop = true;
-//		FadeScript.Finish();
+		hack.SendMessage("Finish", 1);
 	} else if (collision.gameObject.tag.Equals("Failure")) {
 		//set to lose
 		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
-		print("Lose");
+		hack.SendMessage("Finish", -1);
 		stop = true;
 	} else {
 		transform.position = startpos;

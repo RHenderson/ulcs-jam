@@ -3,8 +3,7 @@ using System.Collections;
 
 public class MementoScript : MonoBehaviour
 {
-	[SerializeField]
-	private int sceneToLoad;
+	public int sceneToLoad;
 	
 	private Color startcolor;
 

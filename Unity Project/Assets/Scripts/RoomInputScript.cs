@@ -86,12 +86,8 @@ public class RoomInputScript : MonoBehaviour
 			yield return new WaitForEndOfFrame();
 		}
 		
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(2);
 		
-		FadeScript.Instance.FadeOut ();
-		
-		yield return new WaitForSeconds(5);
-		
-		mem.MoveLevel ();
+		FadeScript.Instance.FadeOut (mem.sceneToLoad);
 	}
 }
