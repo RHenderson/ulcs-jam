@@ -13,7 +13,7 @@ function Start() {
 
 }
 
-function Update() {
+function FixedUpdate() {
 
 	if (stop){
 	return;
@@ -42,27 +42,7 @@ function Update() {
     }
 }
 
-function OnCollisionEnter(collision : Collision){
-	
-	print("Collision");	
-	if (collision.gameObject.tag.Equals("Objective")) {
-		//set to win
-		
-		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
-		print("Win");
-		//stop = true;
-		}
-	else if (collision.gameObject.tag.Equals("Failure")) {
-		//set to lose
-		transform.Translate(Vector3(0,0,0) * Time.deltaTime * walkspeed);
-		print("Lose");
-		stop = true;
-		}
-	else if (collision.gameObject.tag.Equals("Archer")) {
-		}
-	else {
-		
-		}
+function OnCollisionEnter(collision : Collision){		
 	rigidbody.angularVelocity = Vector3.zero;
 	}
 	
