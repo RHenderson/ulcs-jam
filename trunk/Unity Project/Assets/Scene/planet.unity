@@ -6870,7 +6870,7 @@ GUIText:
   m_Text: 'Time: 00'
   m_Anchor: 3
   m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
+  m_PixelOffset: {x: -50, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -9343,7 +9343,7 @@ GUIText:
   m_GameObject: {fileID: 1125173007}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Gold: 0/5'
+  m_Text: 'Gold: 0/7'
   m_Anchor: 3
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
