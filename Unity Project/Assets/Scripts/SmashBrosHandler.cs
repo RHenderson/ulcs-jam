@@ -38,18 +38,19 @@ public class SmashBrosHandler : MonoBehaviour {
 		timeText.text = (maxTime - currentTime).ToString("f1");
 		targetText.text = "Target: " + targetScore.ToString();
 		
+		
 		if ((maxTime-currentTime)<24 && (maxTime-currentTime)>23.9)
 			nearlyUp.audio.Play();
 		
-		if ((maxTime-currentTime)<20 && (maxTime-currentTime)>10)
+		if  (score>=targetScore || (maxTime-currentTime)>=20){
+			music.audio.pitch = 1.0f;
+		} else if ((maxTime-currentTime)<20 && (maxTime-currentTime)>10){
 			music.audio.pitch = 1.5f;
-		
-		if ((maxTime-currentTime)<=10 && (maxTime-currentTime)>5)
+		} else if ((maxTime-currentTime)<=10 && (maxTime-currentTime)>5){
 			music.audio.pitch = 1.75f;
-		
-		if ((maxTime-currentTime)<=5 )
+		} else /*((maxTime-currentTime)<=5 )*/{
 			music.audio.pitch = 2.0f;
-		
+		}
 		
 		if (currentTime >= maxTime){
 			if (score >= targetScore){	
@@ -70,7 +71,7 @@ public class SmashBrosHandler : MonoBehaviour {
 		if (currentTime > 2){
 		score += amount;
 		scoreText.text = "Score: " + score.ToString();
-			if ((score>targetScore) && (score%100 == 0)){
+			if ((score>=targetScore) && (score%100 == 0)){
 				successClip.audio.Play();
 				Debug.Log(score);
 				sparks.Play();
