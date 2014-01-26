@@ -31,12 +31,21 @@ public class SmashBrosHandler : MonoBehaviour {
 	void Update () {	
 		
 		currentTime += Time.deltaTime;	
-		timeText.text = (80 - currentTime).ToString("f1");
+		timeText.text = (maxTime - currentTime).ToString("f1");
 		targetText.text = "Target: " + targetScore.ToString();
-	
-		if (currentTime > maxTime){
-			//Application.LoadLevel.0;
+		
+		if (currentTime >= maxTime){
+			if (score >= targetScore){	
+				if (FadeScript.Instance)
+					FadeScript.Instance.Finish (FadeScript.LevelCode.WIN);
+		 		Application.LoadLevel(0);
+			}else{
+				if (FadeScript.Instance)
+					FadeScript.Instance.Finish (FadeScript.LevelCode.LOSE);
+		 		Application.LoadLevel(0);
+			}
 		}
+		
 	}
 	
 	public void updateScore(int amount){
