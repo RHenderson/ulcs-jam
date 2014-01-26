@@ -11,33 +11,29 @@ public class RoomInputScript : MonoBehaviour
 	[SerializeField]
 	private float minScale = 0.3f;
 	[SerializeField]
-	private Renderer fade;
-	[SerializeField]
-	private Color targetColour;
-	
-	// Use this for initialization
-	void Start ()
-	{
-		if (!Application.isEditor) 
-			Screen.lockCursor = true;
-	}
+	private Renderer indicator;
 	
 	// Update is called once per frame
 	void Update ()
 	{	
-		if (Input.GetMouseButtonDown (0)) {
 	
-			Transform cam = Camera.main.transform;
-			RaycastHit hit = new RaycastHit ();
+		Transform cam = Camera.main.transform;
+		RaycastHit hit = new RaycastHit ();
 		
 		
-			if (Physics.Raycast (cam.position, cam.forward, out hit, 10)) {
+		if (Physics.Raycast (cam.position, cam.forward, out hit, 10)) {
+			if (hit.transform.tag == "Memento")
+				indicator.material.color = Color.green;
+			else
+				indicator.material.color = Color.white;
+				
+			if (Input.GetMouseButtonDown (0)) {
 				if (hit.transform.tag == "Lid") {
 					hit.collider.gameObject.GetComponent<ChestScript> ().Open ();
 				}
 				
 				if (hit.transform.tag == "Memento") {
-					audio.Play();
+					audio.Play ();
 					StartCoroutine (LevelTransistion (hit.collider.gameObject.GetComponent<MementoScript> ()));
 				}
 			}
@@ -53,7 +49,7 @@ public class RoomInputScript : MonoBehaviour
 		
 		yield return new WaitForSeconds(1);
 		
-		FadeScript.Instance.FadeOut();
+		FadeScript.Instance.FadeOut ();
 		
 		yield return new WaitForSeconds(5);
 		
