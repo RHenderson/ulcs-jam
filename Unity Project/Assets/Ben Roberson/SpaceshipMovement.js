@@ -6,6 +6,7 @@ var stop: boolean = false;
 var startpos: Vector3;
 var score: int = 0;
 var particleTRex: ParticleSystem;
+var exhaust: AudioSource;
 
 function Start() {
 
@@ -36,9 +37,12 @@ function FixedUpdate() {
     if (Input.GetKey("left shift") && Input.GetKey("w")) {
     	transform.Translate(Vector3(0, -2.5, 0) * Time.deltaTime * walkspeed);
     	particleTRex.Play();
+    	if(!exhaust.isPlaying)
+    		exhaust.Play();
     }
     else {
     	particleTRex.Stop();
+    	exhaust.Stop();
     }
 }
 

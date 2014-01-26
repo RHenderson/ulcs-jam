@@ -7,7 +7,7 @@ public class SpaceGame : GoldGame {
     private GUIText m_TimeText;
 
     [SerializeField]
-    private float m_MaxTime = 30;
+    private float m_MaxTime = 120;
     private float m_Timer;
 
     private bool m_Dead;
@@ -18,8 +18,14 @@ public class SpaceGame : GoldGame {
         m_TimeText.text = "Time: " + m_Timer;
         if (m_Timer > m_MaxTime && !m_Dead)
         {
+			if(m_NumberOfGold >= m_GoldToCollect) {
+				Win();
+			}
+			else {
+				Die();
+			}
             m_Dead = true;
-            Die();
+            //Die();
         }
     }
 
@@ -27,6 +33,14 @@ public class SpaceGame : GoldGame {
     {
         m_InfoText.text = "Game Over";
         m_InfoText.enabled = true;
+        if (FadeScript.Instance)
+            FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE, 0);
+    }
+
+	private void Win()
+	{
+		m_InfoText.text = "You Win!";
+		m_InfoText.enabled = true;
         if (FadeScript.Instance)
             FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE, 0);
     }
