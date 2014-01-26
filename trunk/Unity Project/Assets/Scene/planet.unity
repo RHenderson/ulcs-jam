@@ -213,7 +213,7 @@ Transform:
   m_PrefabInternal: {fileID: 2117872400}
   m_GameObject: {fileID: 64935223}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 180, z: 30}
+  m_LocalPosition: {x: 0, y: 200, z: 30}
   m_LocalScale: {x: 1.25, y: 1.75, z: .600000024}
   m_Children:
   - {fileID: 920462555}
@@ -1571,7 +1571,7 @@ Transform:
   m_PrefabInternal: {fileID: 1226618218}
   m_GameObject: {fileID: 251657132}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -180, y: -60, z: 10}
+  m_LocalPosition: {x: -200, y: -60, z: 10}
   m_LocalScale: {x: 1.25, y: 1.75, z: .600000024}
   m_Children:
   - {fileID: 805343710}
@@ -9540,6 +9540,7 @@ MonoBehaviour:
   startpos: {x: 0, y: 0, z: 0}
   score: 0
   particleTRex: {fileID: 1594826271}
+  exhaust: {fileID: 1594826272}
 --- !u!54 &1178306850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9623,9 +9624,9 @@ MonoBehaviour:
   m_GoldNumberText: {fileID: 1125173009}
   m_PickupSound: {fileID: 1178306856}
   m_InfoText: {fileID: 1218772979}
-  m_GoldToCollect: 5
+  m_GoldToCollect: 7
   m_TimeText: {fileID: 944856864}
-  m_MaxTime: 30
+  m_MaxTime: 120
 --- !u!82 &1178306856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9898,7 +9899,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: a4c255693387cc043b7323fbd13077ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -180
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a4c255693387cc043b7323fbd13077ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10055,7 +10056,7 @@ AudioSource:
   m_GameObject: {fileID: 1303196672}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7800439335e3a7f4e9d0c376cf2375c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6bb61a7401ef9784988f4a422578d568, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10676,6 +10677,7 @@ GameObject:
   - 4: {fileID: 1594826269}
   - 198: {fileID: 1594826271}
   - 199: {fileID: 1594826270}
+  - 82: {fileID: 1594826272}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -11776,6 +11778,64 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+--- !u!82 &1594826272
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594826268}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2a3e239f6694ef44b9b7aa06d87694c5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .200000003
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1605142060
 GameObject:
   m_ObjectHideFlags: 0
@@ -13622,7 +13682,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a4c255693387cc043b7323fbd13077ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 180
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a4c255693387cc043b7323fbd13077ab, type: 3}
       propertyPath: m_LocalPosition.z
