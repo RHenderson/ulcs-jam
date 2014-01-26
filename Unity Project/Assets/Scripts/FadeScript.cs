@@ -57,8 +57,8 @@ public class FadeScript : MonoBehaviour
 		return total;
 	}
 	
-	public void Finish(int level, LevelCode success) {
-		levelProgress[level] = success;
+	public void Finish(LevelCode success) {
+		levelProgress[Application.loadedLevel - 1] = success;
 		FadeOut();
 	}
 	

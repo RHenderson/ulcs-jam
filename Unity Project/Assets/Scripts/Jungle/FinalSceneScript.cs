@@ -36,12 +36,14 @@ public class FinalSceneScript : InteractiveObject {
             m_CutSceneCamera.transform.LookAt(m_SpaceShip);
             yield return new WaitForEndOfFrame();
         }
-
+        if (FadeScript.Instance)
+            FadeScript.Instance.Finish(FadeScript.LevelCode.LOSE);
         while (Vector3.Distance(m_SpaceShip.position, m_LiftPoint.position) > 2)
         {
             m_SpaceShip.position = Vector3.Lerp(m_SpaceShip.position, m_LightSpeedPoint.position, Time.deltaTime * 4);
             m_CutSceneCamera.transform.LookAt(m_SpaceShip);
             yield return new WaitForEndOfFrame();
         }
+        Application.LoadLevel(0);
     }
 }

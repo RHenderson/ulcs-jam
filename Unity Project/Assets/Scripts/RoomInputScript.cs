@@ -18,10 +18,14 @@ public class RoomInputScript : MonoBehaviour
     [SerializeField]
     private GUIText m_ClickToInteractText;
 
+    [SerializeField]
+    private Vignetting m_Vignetting;
+
     void Start()
     {
         m_ClickToInteractText.enabled = false;
         m_InfoDisplay.enabled = false;
+        m_Vignetting.intensity += FadeScript.Instance.totalWins();
     }
 	
 	// Update is called once per frame
